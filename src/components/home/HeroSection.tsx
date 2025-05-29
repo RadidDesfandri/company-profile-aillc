@@ -22,7 +22,7 @@ const HeroSection = () => {
         <h1 className="max-w-[700px] text-xl font-poppins font-medium tracking-wide font- md:text-4xl">
           Pelopor Pendongkrak PD Ngomong Inggris di Kampung Inggris Pare
         </h1>
-        <p className="mt-3 font-poppins max-w-[480px] text-sm md:text-base">
+        <p className="mt-3 font-poppins max-w-[480px] text-sm md:text-base text-neutral-200">
           Bersama ribuan alumni lainnya, tingkatkan Skill Ngomong Inggris
           terbaikmu di Mr Bob Kampung Inggris!
         </p>

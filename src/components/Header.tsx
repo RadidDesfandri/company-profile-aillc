@@ -95,7 +95,7 @@ const Header = () => {
 };
 
 const ContactUs = () => (
-  <Link href="#" className="px-4 py-1 h-fit w-fit bg-primary text-white">
+  <Link href="#" className="px-4 py-1 h-fit w-fit bg-custom-primary text-white">
     Hubungi kami
   </Link>
 );
