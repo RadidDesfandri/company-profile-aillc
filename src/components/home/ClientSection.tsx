@@ -7,7 +7,7 @@ const ClientSection = () => {
         Our Amazing partner that support us
       </h1>
 
-      <div className="mt-5 flex items-center justify-center gap-12 overflow-x-auto">
+      <div className="mt-5 flex items-center justify-center gap-6 md:gap-12 overflow-x-auto">
         {Array.from({ length: 5 }, (_, idx) => (
           <Image
             key={idx}
@@ -15,7 +15,7 @@ const ClientSection = () => {
             src={`/assets/client-${idx + 1}.svg`}
             width={150}
             height={150}
-            className="w-14"
+            className="md:w-14 w-10"
           />
         ))}
       </div>
