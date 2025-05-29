@@ -1,3 +1,9 @@
+import HeroSection from "@/components/home/HeroSection";
+
 export default function Home() {
-  return <div className="font-poppins">Hallo</div>;
+  return (
+    <div>
+      <HeroSection />
+    </div>
+  );
 }
