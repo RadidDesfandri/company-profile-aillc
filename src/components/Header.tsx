@@ -7,15 +7,10 @@ import { MdMenu } from "react-icons/md";
 import SlideInAnimate from "./animations/SlideInAnimate";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { IoClose } from "react-icons/io5";
-
-const itemRoutes = [
-  { url: "/", label: "What we do" },
-  { url: "/", label: "What we serve" },
-  { url: "/", label: "Who we are" },
-  { url: "/", label: "Our Service" },
-];
+import { useRoutes } from "@/hooks/useRoutes";
 
 const Header = () => {
+  const routes = useRoutes();
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   const [isScroll, setIsScroll] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -45,8 +40,15 @@ const Header = () => {
 
         <nav className="hidden lg:flex items-center gap-10 font-poppins font-light">
           <ul className="flex items-center gap-10">
-            {itemRoutes.map((item) => (
-              <Link key={item.label} href={item.url}>
+            {routes.map((item) => (
+              <Link
+                key={item.label}
+                href={item.url}
+                className={clsx(
+                  "hover:scale-[102%] transition-all duration-300",
+                  item.active && "font-semibold"
+                )}
+              >
                 <li>{item.label}</li>
               </Link>
             ))}
@@ -70,11 +72,14 @@ const Header = () => {
       >
         <nav className="flex flex-col gap-10">
           <ul className="flex flex-col gap-10">
-            {itemRoutes.map((item) => (
+            {routes.map((item) => (
               <Link
                 key={item.label}
                 href={item.url}
-                className="border-b border-b-neutral-300"
+                className={clsx(
+                  "border-b border-b-neutral-300",
+                  item.active && "font-semibold"
+                )}
               >
                 <li>{item.label}</li>
               </Link>
