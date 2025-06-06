@@ -13,12 +13,7 @@ export const useRoutes = () => {
         active: pathname === "/about-us",
       },
       { url: "/program", label: "Program", active: pathname === "/program" },
-      {
-        url: "/testimoni",
-        label: "Testimoni",
-        active: pathname === "/testimoni",
-      },
-      { url: "/gallery", label: "Galeri", active: pathname === "/gallery" },
+      // { url: "/gallery", label: "Galeri", active: pathname === "/gallery" },
       {
         url: "/registration",
         label: "Pendaftaran",

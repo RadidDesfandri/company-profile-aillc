@@ -6,10 +6,7 @@ const ClientSection = () => {
       <div className="max-w-7xl mx-auto px-5 py-8 md:px-14 md:py-14">
         <h1 className="md:text-3xl text-lg font-poppins text-center font-semibold">
           Mitra luar biasa yang{" "}
-          <strong className="text-amber-300 drop-shadow-amber-400">
-            mendukung
-          </strong>{" "}
-          kami
+          <strong className="text-custom-secondary">mendukung</strong> kami
         </h1>
 
         <div className="mt-5 flex items-center justify-center gap-6 md:gap-12 overflow-x-auto">

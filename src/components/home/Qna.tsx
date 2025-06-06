@@ -40,7 +40,7 @@ const Qna = () => {
       <div className="max-w-7xl mx-auto px-5 py-8 md:px-14 md:py-14">
         <h1 className="md:text-3xl text-lg font-poppins text-center font-semibold">
           Masih Bingung? Kami Punya{" "}
-          <strong className="text-amber-300">Jawabannya</strong>
+          <strong className="text-custom-secondary">Jawabannya</strong>
         </h1>
         <p className="text-center mt-2 text-neutral-700 text-sm">
           Jawaban atas pertanyaan-pertanyaan yang sering diajukan oleh calon
