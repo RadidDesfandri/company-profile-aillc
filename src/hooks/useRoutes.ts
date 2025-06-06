@@ -14,11 +14,11 @@ export const useRoutes = () => {
       },
       { url: "/program", label: "Program", active: pathname === "/program" },
       // { url: "/gallery", label: "Galeri", active: pathname === "/gallery" },
-      {
-        url: "/registration",
-        label: "Pendaftaran",
-        active: pathname === "/registration",
-      },
+      // {
+      //   url: "/registration",
+      //   label: "Pendaftaran",
+      //   active: pathname === "/registration",
+      // },
     ],
     [pathname]
   );
