@@ -47,11 +47,8 @@ const Testimonial = () => {
   return (
     <div className="max-w-7xl mx-auto px-5 py-8 md:px-14 md:py-14 flex flex-col items-center gap-4">
       <h1 className="md:text-3xl text-lg font-poppins text-center font-semibold">
-        Sukses{" "}
-        <strong className="text-amber-300 drop-shadow-amber-400">
-          Belajar
-        </strong>{" "}
-        Bahasa Inggris, Ini Kata Mereka
+        Sukses <strong className="text-custom-secondary">Belajar</strong> Bahasa
+        Inggris, Ini Kata Mereka
       </h1>
       <Carousel className="w-full md:max-w-2xl mt-4">
         <CarouselContent>

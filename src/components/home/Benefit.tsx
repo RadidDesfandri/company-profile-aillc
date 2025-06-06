@@ -23,10 +23,8 @@ const Benefit = () => {
   return (
     <div className="max-w-5xl mx-auto px-5 md:px-14 py-14">
       <h2 className="md:text-4xl text-xl font-poppins text-center font-semibold">
-        <strong className="text-amber-300 drop-shadow-amber-400">
-          Keunggulan
-        </strong>{" "}
-        Kampung Inggris Kami
+        <strong className="text-custom-secondary">Keunggulan</strong> Kampung
+        Inggris Kami
       </h2>
       <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-5">
         {benefitItems.map((item, idx) => (

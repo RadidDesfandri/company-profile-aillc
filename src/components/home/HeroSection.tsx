@@ -16,7 +16,7 @@ const HeroSection = () => {
       <div className="absolute bottom-20 md:bottom-12 z-10 transform px-5 text-white md:left-9 md:-translate-y-1/6">
         <h1 className="max-w-[700px] text-2xl font-poppins font-semibold tracking-wide font- md:text-5xl">
           Belajar Bahasa Inggris{" "}
-          <strong className="text-amber-300">Intensif</strong> di Kampung
+          <strong className="text-custom-secondary">Intensif</strong> di Kampung
           Inggris
         </h1>
         <p className="mt-3 font-poppins max-w-[480px] text-sm md:text-base text-neutral-100">
