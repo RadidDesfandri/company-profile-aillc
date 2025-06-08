@@ -1,38 +1,24 @@
 "use client";
 
+import { useClickOutside } from "@/hooks/useClickOutside";
+import { useRoutes } from "@/hooks/useRoutes";
 import clsx from "clsx";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import { IoClose } from "react-icons/io5";
 import { MdMenu } from "react-icons/md";
 import SlideInAnimate from "./animations/SlideInAnimate";
-import { useClickOutside } from "@/hooks/useClickOutside";
-import { IoClose } from "react-icons/io5";
-import { useRoutes } from "@/hooks/useRoutes";
 
 const Header = () => {
   const routes = useRoutes();
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
-  const [isScroll, setIsScroll] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useClickOutside([ref], () => setIsOpenMenu(false), isOpenMenu);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const ifScroll = window.scrollY;
-      setIsScroll(ifScroll > 3);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <header
       className={clsx(
-        "fixed z-50 top-0 w-full transition-all duration-300",
-        isScroll ? "bg-white shadow" : "bg-gray-200/50"
+        "absolute z-50 top-0 w-full transition-all duration-300 bg-transparent"
       )}
     >
       <div className="max-w-7xl px-5 py-4 md:px-14 mx-auto flex items-center justify-between">
@@ -100,7 +86,10 @@ const Header = () => {
 };
 
 const ContactUs = () => (
-  <Link href="#" className="px-4 py-1 h-fit w-fit bg-custom-primary text-white">
+  <Link
+    href="#"
+    className="px-4 py-1 h-fit w-fit bg-custom-secondary hover:bg-custom-primary transition-all duration-300 text-white"
+  >
     Hubungi kami
   </Link>
 );

@@ -19,7 +19,7 @@ const Headline = () => {
         <p className="text-neutral-700 text-xs md:text-sm">
           Mulai dari pemula hingga siap TOEFL – semua bisa kamu temukan di sini.
         </p>
-        <Button className="w-fit bg-custom-primary hover:bg-custom-secondary">
+        <Button className="w-fit bg-custom-secondary hover:bg-custom-primary cursor-pointer">
           <Link href="#programs">Lihat semua program</Link>
         </Button>
       </div>
