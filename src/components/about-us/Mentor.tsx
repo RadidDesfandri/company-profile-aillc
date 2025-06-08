@@ -71,7 +71,7 @@ const Mentor = () => {
         menyenangkan.
       </p>
 
-      <Button className="bg-custom-primary hover:bg-custom-secondary rounded-full w-fit">
+      <Button className="bg-custom-secondary hover:bg-custom-primary rounded-full w-fit">
         Lihat seluruh mentor
       </Button>
     </div>

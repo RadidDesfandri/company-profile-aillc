@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "../ui/button";
 
 const Headline = () => {
   return (
@@ -12,9 +13,9 @@ const Headline = () => {
           dikenal luas sebagai Kampung Inggris. Sejak tahun 2025, kami telah
           membantu ribuan siswa dari seluruh Indonesia.
         </p>
-        <button className="rounded-full hidden md:flex bg-custom-primary px-3 text-xs md:text-sm font-poppins md:px-4 py-2 text-white active:scale-95 transition-all duration-300">
-          Kenal kami
-        </button>
+        <Button className="hidden md:flex bg-custom-secondary hover:bg-custom-primary rounded-full">
+          Kenal Kami
+        </Button>
       </div>
 
       <Image
