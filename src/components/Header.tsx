@@ -8,6 +8,7 @@ import { useRef, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { MdMenu } from "react-icons/md";
 import SlideInAnimate from "./animations/SlideInAnimate";
+import Image from "next/image";
 
 const Header = () => {
   const routes = useRoutes();
@@ -22,7 +23,13 @@ const Header = () => {
       )}
     >
       <div className="max-w-7xl px-5 py-4 md:px-14 mx-auto flex items-center justify-between">
-        <p className="font-poppins">Logo</p>
+        <Image
+          src="/assets/logo.png"
+          alt="logo"
+          width={150}
+          height={150}
+          className="w-40"
+        />
 
         <nav className="hidden lg:flex items-center gap-10 font-poppins font-light">
           <ul className="flex items-center gap-10">

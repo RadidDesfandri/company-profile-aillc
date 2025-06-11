@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
 
 const mentorItems = [
   { name: "Alexander", imageUrl: "/assets/mentor-1.jpg" },
@@ -13,9 +14,14 @@ const mentorItems = [
   { name: "Kevin", imageUrl: "/assets/mentor-5.jpg" },
 ];
 
-const Mentor = () => {
+interface MentorProps {
+  showMentor?: number;
+}
+
+const Mentor = ({ showMentor = 5 }: MentorProps) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const middleItemRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     if (scrollContainerRef.current && middleItemRef.current) {
@@ -35,11 +41,14 @@ const Mentor = () => {
         Belajar Langsung dari yang Sudah Terbukti Jago
       </h1>
       <div
+        id="mentor"
         ref={scrollContainerRef}
         className="flex items-center my-3 gap-4 overflow-x-auto whitespace-nowrap scroll-smooth snap-x snap-mandatory"
       >
-        {mentorItems.map((item, idx) => {
-          const middleIndex = Math.floor(mentorItems.length / 2);
+        {mentorItems.slice(0, showMentor).map((item, idx) => {
+          const middleIndex = Math.floor(
+            mentorItems.slice(0, showMentor).length / 2
+          );
           const isMiddle = middleIndex === idx;
 
           return (
@@ -70,10 +79,14 @@ const Mentor = () => {
         Berkomitmen untuk menjadikan belajar bahasa Inggris lebih mudah dan
         menyenangkan.
       </p>
-
-      <Button className="bg-custom-secondary hover:bg-custom-primary rounded-full w-fit">
-        Lihat seluruh mentor
-      </Button>
+      {showMentor <= 3 && (
+        <Button
+          onClick={() => router.push("/about-us#mentor")}
+          className="bg-custom-secondary hover:bg-custom-primary rounded-full w-fit"
+        >
+          Lihat seluruh mentor
+        </Button>
+      )}
     </div>
   );
 };
