@@ -1,3 +1,4 @@
+import Mentor from "@/components/about-us/Mentor";
 import Benefit from "@/components/home/Benefit";
 import ClientSection from "@/components/home/ClientSection";
 import HeroSection from "@/components/home/HeroSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <Benefit />
       <ClientSection />
       <Testimonial />
+      <Mentor showMentor={3}/>
       <Qna />
       <Maps />
     </div>
